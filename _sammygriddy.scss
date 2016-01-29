@@ -29,91 +29,91 @@ $desktop: 1400px;
 }
 
 // Required Styles
-.sg-container{
+.sg__container{
   position: relative;
   clear: both;
   overflow: auto;
 }
 
 // Smart Columns
-.sg-smart-col:first-child:nth-last-child(1) {
+.sg__smart-col:first-child:nth-last-child(1) {
     @include defineSpan(100%,100%,100%,100%);
 }
 
-.sg-smart-col:first-child:nth-last-child(2),
-.sg-smart-col:first-child:nth-last-child(2) ~ .sg-smart-col {
+.sg__smart-col:first-child:nth-last-child(2),
+.sg__smart-col:first-child:nth-last-child(2) ~ .sg__smart-col {
     @include defineSpan(100%,50%,50%,50%);
 }
 
-.sg-smart-col:first-child:nth-last-child(3),
-.sg-smart-col:first-child:nth-last-child(3) ~ .sg-smart-col {
+.sg__smart-col:first-child:nth-last-child(3),
+.sg__smart-col:first-child:nth-last-child(3) ~ .sg__smart-col {
     @include defineSpan(100%,33.333%,33.333%,33.333%);
 }
 
-.sg-smart-col:first-child:nth-last-child(4),
-.sg-smart-col:first-child:nth-last-child(4) ~ .sg-smart-col {
+.sg__smart-col:first-child:nth-last-child(4),
+.sg__smart-col:first-child:nth-last-child(4) ~ .sg__smart-col {
     @include defineSpan(100%,50%,25%,25%);
 }
-.sg-smart-col:first-child:nth-last-child(5),
-.sg-smart-col:first-child:nth-last-child(5) ~ .sg-smart-col {
+.sg__smart-col:first-child:nth-last-child(5),
+.sg__smart-col:first-child:nth-last-child(5) ~ .sg__smart-col {
     @include defineSpan(100%,20%,20%,20%);
 }
-.sg-smart-col:first-child:nth-last-child(6),
-.sg-smart-col:first-child:nth-last-child(6) ~ .sg-smart-col {
+.sg__smart-col:first-child:nth-last-child(6),
+.sg__smart-col:first-child:nth-last-child(6) ~ .sg__smart-col {
     @include defineSpan(100%,33.333%,16.666%,16.666%);
 }
 
 // Full
-.sg-1-1,.sg-2-2,.sg-full{ @include defineSpan(100%,100%,100%,100%); }
+.sg__1-1,.sg__2-2,.sg__full{ @include defineSpan(100%,100%,100%,100%); }
 // Half
-.sg-1-2,.sg-2-4,.sg-3-6{ @include defineSpan(100%,50%,50%,50%); }
+.sg__1-2,.sg__2-4,.sg__3-6{ @include defineSpan(100%,50%,50%,50%); }
 // Thirds
-.sg-1-3{ @include defineSpan(100%,33.333%,33.333%,33.333%); }
-.sg-2-3{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
-.sg-2-3{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
+.sg__1-3{ @include defineSpan(100%,33.333%,33.333%,33.333%); }
+.sg__2-3{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
+.sg__2-3{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
 // Fourths
-.sg-1-4{ @include defineSpan(100%,50%,25%,25%); }
+.sg__1-4{ @include defineSpan(100%,50%,25%,25%); }
 // Fifths
-.sg-1-5{ @include defineSpan(100%,20%,20%,20%); }
-.sg-3-5{ @include defineSpan(100%,60%,60%,60%); }
+.sg__1-5{ @include defineSpan(100%,20%,20%,20%); }
+.sg__3-5{ @include defineSpan(100%,60%,60%,60%); }
 // Sixths
-.sg-1-6{ @include defineSpan(100%,16.666%,16.666%,16.666%); }
-.sg-2-6{ @include defineSpan(100%,33.333%,33.333%,33.333%); }
-.sg-4-6{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
+.sg__1-6{ @include defineSpan(100%,16.666%,16.666%,16.666%); }
+.sg__2-6{ @include defineSpan(100%,33.333%,33.333%,33.333%); }
+.sg__4-6{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
 
-.sg-2-12{ @include defineSpan(100%,16.666%,16.666%,16.666%); }
-.sg-10-12{ @include defineSpan(100%,83.333%,83.333%,66.333%); }
+.sg__2-12{ @include defineSpan(100%,16.666%,16.666%,16.666%); }
+.sg__10-12{ @include defineSpan(100%,83.333%,83.333%,66.333%); }
 
 // Optional Styles
-.sm-hide{
+.sm__hide{
   @include respond-to(small-mobile){
     display: none;
   };
 }
 
-.sg-img{
+.sg__img{
   width: 95%;
   height: 100%;
 }
 
-.sg-var{
+.sg__var{
   width: auto;
 }
 
-.sg-center{
+.sg__center{
   margin: 0 auto;
   float: none;
 }
 
-.sg-table{
+.sg__table{
   display: table;
 }
 
-.sg-hide-horiz{
+.sg__hide-horiz{
   overflow-x: hidden;
 }
 
-.sg-left{
+.sg__left{
   margin: 0 auto;
   float: left;
   @include respond-to(small-mobile){
@@ -121,7 +121,7 @@ $desktop: 1400px;
   }
 }
 
-.sg-right{
+.sg__right{
   margin: 0 auto;
   float: right !important;
   @include respond-to(small-mobile){
