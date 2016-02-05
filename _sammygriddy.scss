@@ -18,10 +18,13 @@ $desktop: 1400px;
   }
 }
 
+$sg--gutter: 12px;
 // Define Spans
 @mixin defineSpan($sm,$m,$t,$d){
     float: left;
     min-height: 1px;
+    padding: $sg--gutter;
+    box-sizing: border-box;
     @include respond-to(small-mobile) { width: $sm; };
     @include respond-to(mobile) { width: $m;};
     @include respond-to(tablet) { width: $t;};
