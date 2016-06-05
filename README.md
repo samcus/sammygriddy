@@ -6,6 +6,22 @@ SammyGriddy is an easy to use, ligh-weight, responsive grid framework. It utiliz
 
 - Clone 'git clone https://github.com/samcus/sammygriddy.git'
 
+#Usage
+```
+<!-- Explicit Grid -->
+<section class="sg__container">
+  <div class="sg__1-2"><h3>Half</h3></div>
+  <div class="sg__1-2"><h3>Half</h3></div>
+</section>
+
+<!-- Implicit Grid-->
+<section class="sg__container">
+  <div class="sg__smart-col"><h4>Third</h4></div>
+  <div class="sg__smart-col"><h4>Third</h4></div>
+  <div class="sg__smart-col"><h4>Third</h4></div>
+</section>
+```
+
 ### License
 ```
 Copyright (C) 2016 Samuel Custer

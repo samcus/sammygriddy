@@ -1,7 +1,10 @@
 // Define Breakpoints
-$mobile: 700px;
-$tablet: 1200px;
-$desktop: 1400px;
+$mobile: 760px;
+$tablet: 960px;
+$desktop: 1280px;
+
+// Wrapper Width
+$sg-wrapper-width: 920px;
 
 @mixin respond-to($media) {
   @if $media == small-mobile {
@@ -18,7 +21,7 @@ $desktop: 1400px;
   }
 }
 
-$sg--gutter: 12px;
+$sg--gutter: 1rem;
 // Define Spans
 @mixin defineSpan($sm,$m,$t,$d){
     float: left;
@@ -31,11 +34,22 @@ $sg--gutter: 12px;
     @include respond-to(desktop)  { width: $d;};
 }
 
+.sg__wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+  width: $sg-wrapper-width;
+}
+
 // Required Styles
 .sg__container{
   position: relative;
   clear: both;
   overflow: auto;
+}
+
+.sg__reverse > *{
+  float: right !important;
 }
 
 // Smart Columns
@@ -67,18 +81,25 @@ $sg--gutter: 12px;
 }
 
 // Full
-.sg__1-1,.sg__2-2,.sg__full{ @include defineSpan(100%,100%,100%,100%); }
+.sg__1-1,.sg__2-2,.sg__3-3,
+.sg__4-4,.sg__5-5,.sg__6-6,
+.sg__8-8,.sg__10-10,.sg__12-12,
+.sg__full{ @include defineSpan(100%,100%,100%,100%); }
 // Half
-.sg__1-2,.sg__2-4,.sg__3-6{ @include defineSpan(100%,50%,50%,50%); }
+.sg__1-2,.sg__2-4,.sg__3-6,
+.sg__4-8,.sg__5-10,.sg__6-12,{ @include defineSpan(100%,50%,50%,50%); }
 // Thirds
 .sg__1-3{ @include defineSpan(100%,33.333%,33.333%,33.333%); }
 .sg__2-3{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
-.sg__2-3{ @include defineSpan(100%,66.666%,66.666%,66.666%); }
 // Fourths
-.sg__1-4{ @include defineSpan(100%,50%,25%,25%); }
+.sg__1-4{ @include defineSpan(100%,25%,25%,25%); }
+.sg__2-4{ @include defineSpan(100%,50%,25%,25%); }
+.sg__3-4{ @include defineSpan(100%,75%,75%,75%); }
 // Fifths
 .sg__1-5{ @include defineSpan(100%,20%,20%,20%); }
+.sg__2-5{ @include defineSpan(100%,40%,40%,40%); }
 .sg__3-5{ @include defineSpan(100%,60%,60%,60%); }
+.sg__4-5{ @include defineSpan(100%,80%,80%,80%); }
 // Sixths
 .sg__1-6{ @include defineSpan(100%,16.666%,16.666%,16.666%); }
 .sg__2-6{ @include defineSpan(100%,33.333%,33.333%,33.333%); }
@@ -130,4 +151,8 @@ $sg--gutter: 12px;
   @include respond-to(small-mobile){
     float: none !important;
   }
+}
+
+.sg__tight-bottom{
+  padding-bottom:0;
 }
