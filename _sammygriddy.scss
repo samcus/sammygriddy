@@ -45,7 +45,7 @@ $sg--gutter: 1rem;
 .sg__container{
   position: relative;
   clear: both;
-  overflow: auto;
+  overflow: visible;
 }
 
 .sg__reverse > *{
